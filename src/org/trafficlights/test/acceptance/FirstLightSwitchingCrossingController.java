@@ -4,14 +4,17 @@ import org.trafficlights.domain.LightState;
 
 public class FirstLightSwitchingCrossingController {
 
+	LightState firstState;
+
 	public void setErsteAmpel(LightState state) {
+		firstState = state;
 	}
 	
 	public void setZweiteAmpel(LightState state) {
 	}
 	
 	public LightState ersteAmpel() {
-		return LightState.GELB;
+		return firstState.next();
 	}
 	
 	public LightState zweiteAmpel() {
