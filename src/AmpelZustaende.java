@@ -9,6 +9,9 @@ public class AmpelZustaende {
 	
 	public String naechsterZustand() {
 		if ("Rot".equals(state)) return "Rot, Gelb";
-		return "Grün";
+		if ("Rot, Gelb".equals(state)) return "Grün";
+		if ("Grün".equals(state)) return "Gelb";
+		if ("Gelb".equals(state)) return "Rot";
+		return "Gelb blinkend";
 	}
 }

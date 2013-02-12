@@ -2,3 +2,6 @@
 |vorheriger Zustand|naechster Zustand?|
 |Rot               |Rot, Gelb         |
 |Rot, Gelb         |Grün              |
+|Grün              |Gelb              |
+|Gelb              |Rot               |
+|ungültiger Zustand|Gelb blinkend     |
