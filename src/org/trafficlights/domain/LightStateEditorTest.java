@@ -36,7 +36,7 @@ public class LightStateEditorTest {
 	}
 	
 	@Test
-	public void setRot() {
+	public void setAsText() {
 		editor.setAsText(stateName);
 		assertEquals(state, editor.getValue());
 	}
