@@ -29,14 +29,14 @@ public class FirstLightSwitchingCrossingController {
 	}
 
 	public void schalteErsteAmpel() {
-		if (!isValidLightStateConfiguration()) {
+		if (!isValidLightStateConfiguration(firstState, secondState)) {
 			warningConfiguration();
 			return;
 		}
 		firstState = firstState.next();
 	}
 
-	private boolean isValidLightStateConfiguration() {
+	private boolean isValidLightStateConfiguration(LightState firstState, LightState secondState) {
 		return !LightState.UNBEKANNT.equals(firstState)
 				&& LightState.ROT.equals(secondState);
 	}
