@@ -25,6 +25,11 @@ public class FirstLightSwitchingCrossingController {
 	}
 	
 	public void execute() {
+		if (!LightState.ROT.equals(secondState)) {
+			firstState = LightState.UNBEKANNT;
+			secondState = LightState.UNBEKANNT;
+			return;
+		}
 		firstState = firstState.next();
 	}
 }

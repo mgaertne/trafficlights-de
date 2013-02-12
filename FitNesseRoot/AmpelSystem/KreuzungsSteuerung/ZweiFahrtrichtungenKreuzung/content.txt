@@ -1,7 +1,8 @@
-!|FirstLightSwitchingCrossingController             |
-|erste Ampel|zweite Ampel|erste Ampel?|zweite Ampel?|
-|Grün       |Rot         |Gelb        |Rot          |
-|Gelb       |Rot         |Rot         |Rot          |
-|Rot, Gelb  |Rot         |Grün        |Rot          |
-|Rot        |Rot         |Rot, Gelb   |Rot          |
+!|FirstLightSwitchingCrossingController              |
+|erste Ampel|zweite Ampel|erste Ampel? |zweite Ampel?|
+|Grün       |Rot         |Gelb         |Rot          |
+|Gelb       |Rot         |Rot          |Rot          |
+|Rot, Gelb  |Rot         |Grün         |Rot          |
+|Rot        |Rot         |Rot, Gelb    |Rot          |
+|Grün       |Rot, Gelb   |Gelb blinkend|Gelb blinkend|
 
