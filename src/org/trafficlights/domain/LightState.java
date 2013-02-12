@@ -15,6 +15,15 @@ public enum LightState {
 	},
 	UNBEKANNT;
 	
+	String description;
+	
+	private LightState() {
+		this("");
+	}
+	
+	private LightState(String description) {
+		this.description = description;
+	}
 	public LightState next() {
 		return UNBEKANNT;
 	}
