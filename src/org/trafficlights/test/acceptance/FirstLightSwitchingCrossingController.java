@@ -8,6 +8,8 @@ public class FirstLightSwitchingCrossingController {
 
 	LightState secondState;
 
+	private CrossingValidator validator = new CrossingValidator();
+
 	public void setErsteAmpel(LightState state) {
 		firstState = state;
 	}
@@ -29,7 +31,7 @@ public class FirstLightSwitchingCrossingController {
 	}
 
 	public void schalteErsteAmpel() {
-		if (!new CrossingValidator().isValidLightStateConfiguration(firstState, secondState)) {
+		if (!validator.isValidLightStateConfiguration(firstState, secondState)) {
 			warningConfiguration();
 			return;
 		}
