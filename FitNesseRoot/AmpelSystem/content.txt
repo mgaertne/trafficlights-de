@@ -1,0 +1,16 @@
+!1 Ampelsteuerungssystem
+
+Diese Suite besteht aus einer Reihe von Tests für das Ampelsystem
+
+----
+
+!contents -R2 -g -p -f -h
+
+!*< SLiM relevant stuff
+
+!define TEST_SYSTEM {slim}
+
+!path classes
+!path fitnesse-standalone.jar
+
+*!

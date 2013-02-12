@@ -1,0 +1,3 @@
+!|Ampel Zustaende                     |
+|vorheriger Zustand|naechster Zustand?|
+|Rot               |Rot, Gelb         |
