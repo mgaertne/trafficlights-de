@@ -18,7 +18,8 @@ public class LightStateEditorTest {
 	public static List<Object[]> data() {
 		return asList(new Object[][] {
 				{ "Rot", ROT },
-				{ "Rot, Gelb", ROT_GELB }
+				{ "Rot, Gelb", ROT_GELB },
+				{ "Grün", GRUEN }
 		});
 	}
 	
