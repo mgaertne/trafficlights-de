@@ -8,7 +8,10 @@ public enum LightState {
 		public LightState next() { return GRUEN; }
 	},
 	GRUEN {
-		public LightState next() { return null; }
+		public LightState next() { return GELB; }
+	},
+	GELB {
+		public LightState next() { return ROT; }
 	};
 	
 	public abstract LightState next();

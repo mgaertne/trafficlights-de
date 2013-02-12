@@ -18,7 +18,9 @@ public class LightStateTest {
 	public static List<Object[]> data() {
 		return asList(new Object[][] {
 				{ ROT, ROT_GELB },
-				{ ROT_GELB, GRUEN }
+				{ ROT_GELB, GRUEN },
+				{ GRUEN, GELB },
+				{ GELB, ROT}
 		});
 	}
 
