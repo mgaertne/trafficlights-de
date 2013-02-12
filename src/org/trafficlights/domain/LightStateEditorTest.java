@@ -21,7 +21,8 @@ public class LightStateEditorTest {
 				{ "Rot, Gelb", ROT_GELB },
 				{ "Grün", GRUEN },
 				{ "Gelb", GELB },
-				{ "Gelb blinkend", UNBEKANNT }
+				{ "Gelb blinkend", UNBEKANNT },
+				{ "ungültiger Zustand", UNBEKANNT }
 		});
 	}
 	

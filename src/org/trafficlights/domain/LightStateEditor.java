@@ -10,7 +10,7 @@ public class LightStateEditor extends PropertyEditorSupport {
 				setValue(lightState);
 				return;
 			}
-				
+			setValue(LightState.UNBEKANNT);	
 		}
 	}
 }
