@@ -37,7 +37,11 @@ public class FirstLightSwitchingCrossingController {
 			return;
 		}
 		firstState = firstState.next();
-	}
+
+		if (!validator.isValidConfiguration(firstState, secondState)) {
+			warningConfiguration();
+		}
+}
 
 	private void warningConfiguration() {
 		firstState = LightState.UNBEKANNT;
