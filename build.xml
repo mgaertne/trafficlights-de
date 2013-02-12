@@ -10,7 +10,7 @@
 	<property name="fitnesseRoot" value="FitNesseRoot" />
 
 	<path id="classpath">
-		<pathelement location="fitnesse.jar" />
+		<pathelement location="fitnesse-standalone.jar" />
 		<fileset dir="${lib}">
 			<include name="*.jar" />
 		</fileset>
