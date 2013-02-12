@@ -1,18 +1,16 @@
 package org.trafficlights.test.acceptance;
 
+import org.trafficlights.domain.LightState;
+
 public class AmpelZustaende {
 
-	private String state;
+	private LightState state;
 
-	public void setVorherigerZustand(String state) {
+	public void setVorherigerZustand(LightState state) {
 		this.state = state;
 	}
 	
-	public String naechsterZustand() {
-		if ("Rot".equals(state)) return "Rot, Gelb";
-		if ("Rot, Gelb".equals(state)) return "Grün";
-		if ("Grün".equals(state)) return "Gelb";
-		if ("Gelb".equals(state)) return "Rot";
-		return "Gelb blinkend";
+	public LightState naechsterZustand() {
+		return state.next();
 	}
 }
