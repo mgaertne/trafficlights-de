@@ -25,6 +25,10 @@ public class FirstLightSwitchingCrossingController {
 	}
 
 	public void execute() {
+		schalteErsteAmpel();
+	}
+
+	public void schalteErsteAmpel() {
 		if (!isValidLightStateConfiguration()) {
 			warningConfiguration();
 			return;

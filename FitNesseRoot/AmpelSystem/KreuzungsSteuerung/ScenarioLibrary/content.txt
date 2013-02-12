@@ -1,0 +1,6 @@
+!|scenario       |ungueltige Kombnation|ersteAmpel||zweiteAmpel|
+|set erste Ampel |@ersteAmpel                                  |
+|set zweite Ampel|@zweiteAmpel                                 |
+|schalte erste Ampel                                           |
+|check           |erste Ampel          |Gelb blinkend          |
+|check           |zweite Ampel         |Gelb blinkend          |

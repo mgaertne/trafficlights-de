@@ -9,13 +9,6 @@
 
 !2 Ungueltige Kombinationen
 
-!|scenario       |ungueltige Kombnation|ersteAmpel||zweiteAmpel|
-|set erste Ampel |@ersteAmpel                                  |
-|set zweite Ampel|@zweiteAmpel                                 |
-|execute                                                       |
-|check           |erste Ampel          |Gelb blinkend          |
-|check           |zweite Ampel         |Gelb blinkend          |
-
 !|script|FirstLightSwitchingCrossingController|
 
 !|ungueltige Kombnation   |
