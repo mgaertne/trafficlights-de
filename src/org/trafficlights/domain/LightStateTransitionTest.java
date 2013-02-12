@@ -12,31 +12,30 @@ import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
 
 @RunWith(Parameterized.class)
-public class LightStateTest {
+public class LightStateTransitionTest {
 
 	@Parameters
 	public static List<Object[]> data() {
 		return asList(new Object[][] {
-				{ "Rot", ROT },
-				{ "Rot, Gelb", ROT_GELB },
-				{ "Grün", GRUEN },
-				{ "Gelb", GELB },
-				{ "Gelb blinkend", UNBEKANNT },
-				{ "ungültiger Zustand", UNBEKANNT }
+				{ ROT, ROT_GELB },
+				{ ROT_GELB, GRUEN },
+				{ GRUEN, GELB },
+				{ GELB, ROT },
+				{ UNBEKANNT, UNBEKANNT }
 		});
 	}
 
-	private String stateName;
-	private LightState state;
+	private LightState previousState;
+	private LightState nextState;
 	
-	public LightStateTest(String stateName, LightState state) {
-		this.stateName = stateName;
-		this.state = state;
+	public LightStateTransitionTest(LightState previousState, LightState nextState) {
+		this.previousState = previousState;
+		this.nextState = nextState;
 	}
 	
 	@Test
-	public void valueFor() {
-		assertEquals(state, LightState.valueFor(stateName));
+	public void testStateChange() {
+		assertEquals(nextState, previousState.next());
 	}
 
 }

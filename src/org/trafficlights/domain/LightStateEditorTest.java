@@ -22,7 +22,6 @@ public class LightStateEditorTest {
 				{ "Grün", GRUEN },
 				{ "Gelb", GELB },
 				{ "Gelb blinkend", UNBEKANNT },
-				{ "ungültiger Zustand", UNBEKANNT }
 		});
 	}
 	
@@ -39,6 +38,12 @@ public class LightStateEditorTest {
 	public void setAsText() {
 		editor.setAsText(stateName);
 		assertEquals(state, editor.getValue());
+	}
+	
+	@Test
+	public void getAsText() {
+		editor.setValue(state);
+		assertEquals(stateName, editor.getAsText());
 	}
 
 }

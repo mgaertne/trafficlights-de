@@ -15,11 +15,19 @@ public enum LightState {
 	},
 	UNBEKANNT("Gelb blinkend");
 	
+	public static LightState valueFor(String stateName) {
+		for (LightState state: values()) {
+			if (state.description.equals(stateName)) return state;
+		}
+		return UNBEKANNT;
+	}
+	
 	String description;
 	
 	private LightState(String description) {
 		this.description = description;
 	}
+	
 	public LightState next() {
 		return UNBEKANNT;
 	}
