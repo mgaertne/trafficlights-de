@@ -29,16 +29,11 @@ public class FirstLightSwitchingCrossingController {
 	}
 
 	public void schalteErsteAmpel() {
-		if (!isValidLightStateConfiguration(firstState, secondState)) {
+		if (!new CrossingValidator().isValidLightStateConfiguration(firstState, secondState)) {
 			warningConfiguration();
 			return;
 		}
 		firstState = firstState.next();
-	}
-
-	private boolean isValidLightStateConfiguration(LightState firstState, LightState secondState) {
-		return !LightState.UNBEKANNT.equals(firstState)
-				&& LightState.ROT.equals(secondState);
 	}
 
 	private void warningConfiguration() {
@@ -46,4 +41,12 @@ public class FirstLightSwitchingCrossingController {
 		secondState = LightState.UNBEKANNT;
 	}
 
+	static class CrossingValidator {
+
+		boolean isValidLightStateConfiguration(LightState firstState, LightState secondState) {
+			return !LightState.UNBEKANNT.equals(firstState)
+					&& LightState.ROT.equals(secondState);
+		}
+		
+	}
 }
