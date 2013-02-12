@@ -5,6 +5,10 @@ import java.beans.PropertyEditorSupport;
 public class LightStateEditor extends PropertyEditorSupport {
 
 	public void setAsText(String state) {
-		setValue(LightState.ROT);
+		if ("Rot".equals(state)) {
+			setValue(LightState.ROT);
+			return;
+		}
+		setValue(LightState.ROT_GELB);
 	}
 }
