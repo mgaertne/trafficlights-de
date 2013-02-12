@@ -5,6 +5,9 @@ public enum LightState {
 		public LightState next() { return ROT_GELB; }
 	},
 	ROT_GELB {
+		public LightState next() { return GRUEN; }
+	},
+	GRUEN {
 		public LightState next() { return null; }
 	};
 	
