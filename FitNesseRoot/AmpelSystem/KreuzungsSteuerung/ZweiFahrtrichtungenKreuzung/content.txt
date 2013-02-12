@@ -9,22 +9,31 @@
 
 !2 Ungueltige Kombinationen
 
-!|FirstLightSwitchingCrossingController                |
-|erste Ampel  |zweite Ampel|erste Ampel? |zweite Ampel?|
-|Grün         |Rot, Gelb   |Gelb blinkend|Gelb blinkend|
-|Grün         |Grün        |Gelb blinkend|Gelb blinkend|
-|Grün         |Gelb        |Gelb blinkend|Gelb blinkend|
-|Gelb         |Rot, Gelb   |Gelb blinkend|Gelb blinkend|
-|Gelb         |Grün        |Gelb blinkend|Gelb blinkend|
-|Gelb         |Gelb        |Gelb blinkend|Gelb blinkend|
-|Rot, Gelb    |Rot, Gelb   |Gelb blinkend|Gelb blinkend|
-|Rot, Gelb    |Grün        |Gelb blinkend|Gelb blinkend|
-|Rot, Gelb    |Gelb        |Gelb blinkend|Gelb blinkend|
-|Rot          |Rot, Gelb   |Gelb blinkend|Gelb blinkend|
-|Rot          |Grün        |Gelb blinkend|Gelb blinkend|
-|Rot          |Gelb        |Gelb blinkend|Gelb blinkend|
-|Gelb blinkend|Rot         |Gelb blinkend|Gelb blinkend|
-|Gelb blinkend|Rot, Gelb   |Gelb blinkend|Gelb blinkend|
-|Gelb blinkend|Grün        |Gelb blinkend|Gelb blinkend|
-|Gelb blinkend|Gelb        |Gelb blinkend|Gelb blinkend|
+!|scenario       |ungueltige Kombnation|ersteAmpel||zweiteAmpel|
+|set erste Ampel |@ersteAmpel                                  |
+|set zweite Ampel|@zweiteAmpel                                 |
+|execute                                                       |
+|check           |erste Ampel          |Gelb blinkend          |
+|check           |zweite Ampel         |Gelb blinkend          |
+
+!|script|FirstLightSwitchingCrossingController|
+
+!|ungueltige Kombnation   |
+|ersteAmpel   |zweiteAmpel|
+|Grün         |Rot, Gelb  |
+|Grün         |Grün       |
+|Grün         |Gelb       |
+|Gelb         |Rot, Gelb  |
+|Gelb         |Grün       |
+|Gelb         |Gelb       |
+|Rot, Gelb    |Rot, Gelb  |
+|Rot, Gelb    |Grün       |
+|Rot, Gelb    |Gelb       |
+|Rot          |Rot, Gelb  |
+|Rot          |Grün       |
+|Rot          |Gelb       |
+|Gelb blinkend|Rot        |
+|Gelb blinkend|Rot, Gelb  |
+|Gelb blinkend|Grün       |
+|Gelb blinkend|Gelb       |
 
