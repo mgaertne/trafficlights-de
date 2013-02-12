@@ -1,0 +1,3 @@
+!|FirstLightSwitchingCrossingController             |
+|erste Ampel|zweite Ampel|erste Ampel?|zweite Ampel?|
+|Grün       |Rot         |Gelb        |Rot          |
