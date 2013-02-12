@@ -6,6 +6,6 @@ public class AmpelZustaende {
 	}
 	
 	public String naechsterZustand() {
-		return null;
+		return "Rot, Gelb";
 	}
 }
