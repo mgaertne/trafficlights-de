@@ -4,22 +4,18 @@ public enum LightState {
 	ROT("Rot") {
 		public LightState next() { return ROT_GELB; }
 	},
-	ROT_GELB {
+	ROT_GELB("Rot, Gelb") {
 		public LightState next() { return GRUEN; }
 	},
-	GRUEN {
+	GRUEN("Grün") {
 		public LightState next() { return GELB; }
 	},
-	GELB {
+	GELB("Gelb") {
 		public LightState next() { return ROT; }
 	},
-	UNBEKANNT;
+	UNBEKANNT("Gelb blinkend");
 	
 	String description;
-	
-	private LightState() {
-		this("");
-	}
 	
 	private LightState(String description) {
 		this.description = description;

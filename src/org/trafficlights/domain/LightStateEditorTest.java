@@ -19,7 +19,9 @@ public class LightStateEditorTest {
 		return asList(new Object[][] {
 				{ "Rot", ROT },
 				{ "Rot, Gelb", ROT_GELB },
-				{ "Grün", GRUEN }
+				{ "Grün", GRUEN },
+				{ "Gelb", GELB },
+				{ "Gelb blinkend", UNBEKANNT }
 		});
 	}
 	
