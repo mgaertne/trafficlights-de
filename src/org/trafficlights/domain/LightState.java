@@ -1,7 +1,7 @@
 package org.trafficlights.domain;
 
 public enum LightState {
-	ROT {
+	ROT("Rot") {
 		public LightState next() { return ROT_GELB; }
 	},
 	ROT_GELB {
