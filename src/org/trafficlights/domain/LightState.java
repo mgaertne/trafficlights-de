@@ -12,7 +12,10 @@ public enum LightState {
 	},
 	GELB {
 		public LightState next() { return ROT; }
-	};
+	},
+	UNBEKANNT;
 	
-	public abstract LightState next();
+	public LightState next() {
+		return UNBEKANNT;
+	}
 }

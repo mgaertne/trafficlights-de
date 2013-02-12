@@ -20,7 +20,8 @@ public class LightStateTest {
 				{ ROT, ROT_GELB },
 				{ ROT_GELB, GRUEN },
 				{ GRUEN, GELB },
-				{ GELB, ROT}
+				{ GELB, ROT },
+				{ UNBEKANNT, UNBEKANNT }
 		});
 	}
 
