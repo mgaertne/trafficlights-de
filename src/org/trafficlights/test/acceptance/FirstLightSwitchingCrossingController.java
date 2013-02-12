@@ -1,5 +1,6 @@
 package org.trafficlights.test.acceptance;
 
+import org.trafficlights.domain.CrossingValidator;
 import org.trafficlights.domain.LightState;
 
 public class FirstLightSwitchingCrossingController {
@@ -31,7 +32,7 @@ public class FirstLightSwitchingCrossingController {
 	}
 
 	public void schalteErsteAmpel() {
-		if (!validator.isValidLightStateConfiguration(firstState, secondState)) {
+		if (!validator.isValidConfiguration(firstState, secondState)) {
 			warningConfiguration();
 			return;
 		}
@@ -41,14 +42,5 @@ public class FirstLightSwitchingCrossingController {
 	private void warningConfiguration() {
 		firstState = LightState.UNBEKANNT;
 		secondState = LightState.UNBEKANNT;
-	}
-
-	static class CrossingValidator {
-
-		boolean isValidLightStateConfiguration(LightState firstState, LightState secondState) {
-			return !LightState.UNBEKANNT.equals(firstState)
-					&& LightState.ROT.equals(secondState);
-		}
-		
 	}
 }
